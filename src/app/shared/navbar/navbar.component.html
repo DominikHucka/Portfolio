@@ -1,0 +1,26 @@
+<section class="header-nav">
+    <div class="nav-container">
+        <a href="#">
+            <div class="initials">
+                <img src="assets/images/initial-left.png">
+                <div class="d-container">
+                    <p class="d">D</p>
+                </div>
+                <div class="seperate"></div>
+                <div class="h-container">
+                    <p class="h">H</p>
+                </div>
+                <img src="assets/images/initial-right.png">
+            </div>
+        </a>
+        <div class="navbar">
+            
+            <div (click)="toggleActiveAndNavigate()" [class.active]="isActive" [class.not-active]="!isActive"
+                class="btn not-active">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>
+</section>

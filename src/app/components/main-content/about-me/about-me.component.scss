@@ -1,0 +1,159 @@
+@import './../../../shared/mixin.component.scss';
+
+
+.about-me {
+    margin-top: 100px;
+    @include flexDirectionColumn();
+
+    >h2 {
+        font-size: 78px;
+        margin-bottom: 50px;
+        width: 40rem;
+    }
+}
+
+
+.about-me-container {
+    @include dFlexSpace();
+
+    >div {
+        @include flexDirectionColumn();
+        align-items: center;
+        width: 610px;
+        gap: 50px;
+
+        >span {
+            font-size: 23px;
+            font-weight: 400px;
+        }
+    }
+}
+
+
+.lets-talk {
+    @include dFlexCenter();
+    border: 4px solid;
+    padding: 20px 60px 20px 60px;
+    gap: 10px;
+    width: 250px;
+    height: 68px;
+    background-color: $main_color;
+    transform: scaleX(1);
+    transition: all 225ms ease-in-out;
+    font-size: 23px;
+    font-weight: 400;
+
+    &:hover {
+        cursor: pointer;
+        transform: scaleX(1.1);
+        transition: all 225ms ease-in-out;
+    }
+}
+
+
+.profile-image-container {
+    @include flexDirectionColumn();
+    >img {
+        filter: grayscale(100);
+        height: auto;
+        width: 80%;
+        &:hover {
+            transition: all 225ms ease-in-out;
+            filter: grayscale(0);
+        }
+    }
+}
+
+
+
+
+
+/* Große Desktops */
+
+
+@media (max-width: 1200px) {
+}
+
+
+/* Desktops */
+
+
+@media (max-width: 992px) {
+}
+
+
+/* Tablets */
+
+
+@media (max-width: 768px) {
+    .about-me {
+        >h2 {
+            font-size: 50px;
+        }
+    }
+
+    .about-me-container {
+        >div {
+            >span {
+                font-size: 18px;
+            }
+        }
+    }
+}
+
+
+@media (min-width: 578px) {
+}
+
+
+/* Big Mobile Devices */
+
+
+@media (max-width: 576px) {
+    .lets-talk {
+        display: none;
+    }
+
+    .about-me {
+        justify-content: center;
+        align-items: center;
+        margin-top: 0;
+        >h2 {
+            width: 100%;
+            font-size: 36px;
+            text-align: center;
+        }
+    }
+
+    .about-me-container {
+        @include flexDirectionColumn();
+        justify-content: start;
+        >div {
+            width: 100%;
+            >span {
+                font-size: 16px;
+            }
+        }
+    }
+
+
+    .profile-image-container {
+        @include flexDirectionColumn();
+        >img {
+            height: auto;
+            width: 80%;
+        }
+    }
+}
+
+
+/* Small Mobile Devices */
+
+
+@media (max-width: 414px) {
+    .about-me {
+        >h2 {
+            font-size: 26px;
+        }
+    }
+}

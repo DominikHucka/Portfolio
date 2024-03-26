@@ -1,0 +1,87 @@
+<div [class.hovered]="isHovered" (mouseover)="hoverEffect(true)" (mouseleave)="hoverEffect(false)" class="arrow">
+    <img src="./../../../../assets/images/arrow-right.png">
+</div>
+<div (mouseover)="hoverEffect(true)" (mouseleave)="hoverEffect(false)" class="portfolio">
+    <h2>Portfolio</h2>
+    <span>
+        Feel free to try out my latest development projects...
+    </span>
+</div>
+<div (mouseenter)="hoverEffect(true)" (mouseleave)="hoverEffect(false)" class="portfolio-container">
+    <div data-aos="fade-left" (mouseover)="!isMobile && showOverlay[0] = true" (mouseleave)="!isMobile && showOverlay[0] = false" class="projects-container">
+        <div class="projects">
+            <div (mouseover)="showOverlay[0] = true" (mouseleave)="!isMobile && showOverlay[0] = false" [ngClass]="{'d-none': !showOverlay[0]}" class="border">
+                <div class="border-container">
+                    <img src="assets/images/border.png">
+                </div>
+                <div [ngClass]="{'spinning': showOverlay[0]}" class="border-arrow">
+                    <img src="./assets/images/portfolio-arrow.png">
+                </div>
+            </div>
+            <div>
+                <img src="assets/images/join.png">
+            </div>
+        </div>
+        <div (mouseover)="!isMobile && showOverlay[0] = true" (mouseleave)="!isMobile && showOverlay[0] = false" [ngClass]="{'slideInAnimation': showOverlay[0]}" class="project-overlay">
+            <div class="project-text">
+                <h2>Join</h2>
+                <br>
+                <span class="description">JavaScript | HTML | CSS</span>
+                <br>
+                <br>
+                <span>
+                    Task manager inspired by the Kanban System. Create and organize tasks using <br> drag and drop
+                    functions, assign users and categories.
+                </span>
+            </div>
+            <div class="test-button">
+                <a href="https://dominik-hucka.developerakademie.net/JOIN/index/Main/login.html" target="_blank">
+                    <button>Live Test</button>
+                </a>
+            </div>
+        </div>
+        <div class="portfolio-number">
+            <span>01/02</span>
+        </div>
+    </div>
+
+    <div data-aos="fade-right" (mouseover)="!isMobile && showOverlay[1] = true" (mouseleave)="!isMobile && showOverlay[1] = false" class="projects-container .projects-container2">
+        <div class="portfolio-number number-show">
+            <span>02/02</span>
+        </div>
+        <div class="projects">
+            <div (mouseover)="!isMobile && showOverlay[1] = true" (mouseleave)="!isMobile && showOverlay[1] = false" [ngClass]="{'d-none': !showOverlay[1]}" class="border" style="transform: scaleX(-1);">
+                <div class="border-container">
+                    <img src="assets/images/border.png">
+                </div>
+                <div [ngClass]="{'spinning': showOverlay[1]}" class="border-arrow">
+                    <img src="assets/images/portfolio-arrow.png">
+                </div>
+            </div>
+            <div>
+                <img src="assets/images/el-pollo-loco.png">
+            </div>
+        </div>
+        <div (mouseover)="!isMobile && showOverlay[1] = true" (mouseleave)="!isMobile && showOverlay[1] = false" [ngClass]="{'slideOutAnimation': showOverlay[1]}" class="project-overlay">
+            <div class="project-text">
+                <h2>El Pollo Loco</h2>
+                <br>
+                <span class="description">JavaScript | HTML | CSS</span>
+                <br>
+                <br>
+                <span>
+                    Jump, run and throw game based on object-oriented approach. <br> Help Pepe to find coins and tabasco
+                    salsa to fight against the crazy hen.
+                </span>
+            </div>
+            <div class="test-button">
+                <a href="https://dominik-hucka.developerakademie.net/ElPolloLoco/index.html" target="_blank">
+                    <button>Live Test</button>
+                </a>
+            </div>
+        </div>
+        <div class="portfolio-number number-none">
+            <span>02/02</span>
+        </div>
+    </div>
+</div>

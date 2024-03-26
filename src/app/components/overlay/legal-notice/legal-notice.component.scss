@@ -1,0 +1,22 @@
+@import './../../../shared/mixin.component.scss';
+
+
+.legal-notice {
+    @include flexDirectionColumn();
+    height: auto;
+    gap: 50px;
+    margin: 150px 0 100px 0;
+}
+
+
+.header {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.close-btn {
+    @include dFlexSpace();
+    justify-content: center;
+    @include btn();
+}

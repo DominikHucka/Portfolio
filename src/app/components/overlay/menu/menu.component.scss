@@ -1,0 +1,328 @@
+@import './../../../shared/mixin.component.scss';
+
+
+h1 {
+    font-size: 96px;
+    margin: 20px;
+    color: black;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+
+h1::before,
+h1::after {
+    content: '';
+    position: absolute;
+    background-color: black;
+}
+
+
+h1::before {
+    width: 4px;
+    height: 50px;
+    bottom: 10px;
+    left: -50px;
+}
+
+
+h1:hover::before {
+    opacity: 0;
+}
+
+
+h1::after {
+    width: 50px;
+    height: 4px;
+    bottom: 10px;
+    left: -50px;
+}
+
+
+h1:hover::after {
+    animation: slideRight 225ms forwards;
+    transform-origin: right;
+}
+
+
+@keyframes slideRight {
+    0% {
+        transform: translateX(0);
+    }
+
+    40% {
+        transform: translateX(200px);
+        width: 100px;
+    }
+
+
+    60% {
+        transform: translateX(400px);
+        width: 200px;
+    }
+
+
+    100% {
+        transform: translateX(580px);
+        width: 300px;
+    }
+}
+
+
+.menu-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+
+.menu {
+    @include dFlexCenter();
+    flex-direction: column;
+    gap: 35px;
+    height: 100vh;
+}
+
+
+/* Große Desktops */
+
+@media (max-width: 1200px) {}
+
+/* Desktops */
+
+@media (max-width: 992px) {
+    .menu {
+        margin: 40px;
+
+        >a {
+            >h1 {
+                font-size: 50px;
+            }
+        }
+    }
+
+
+    h1::before,
+    h1::after {
+        content: '';
+        position: absolute;
+        background-color: black;
+    }
+
+
+    h1::before {
+        width: 4px;
+        height: 50px;
+        bottom: 10px;
+        left: -50px;
+    }
+
+
+    h1:hover::before {
+        opacity: 0;
+    }
+
+
+    h1::after {
+        width: 50px;
+        height: 4px;
+        bottom: 10px;
+        left: -50px;
+    }
+
+
+    h1:hover::after {
+        animation: slideRightSmallDevice 225ms forwards;
+        transform-origin: right;
+    }
+
+
+    @keyframes slideRightSmallDevice {
+        0% {
+            transform: translateX(0);
+        }
+
+        40% {
+            transform: translateX(100px);
+            width: 50px;
+        }
+
+
+        60% {
+            transform: translateX(200px);
+            width: 100px;
+        }
+
+
+        100% {
+            transform: translateX(300px);
+            width: 200px;
+        }
+    }
+}
+
+/* Tablets */
+
+@media (max-width: 768px) {}
+
+@media (min-width: 578px) {}
+
+/* Big Mobile Devices */
+
+@media (max-width: 576px) {
+    .menu {
+        margin: 0;
+        height: 75vh;
+
+        >a {
+            >h1 {
+                font-size: 36px;
+            }
+        }
+    }
+
+
+    h1::before,
+    h1::after {
+        content: '';
+        position: absolute;
+        background-color: black;
+    }
+
+
+    h1::before {
+        width: 4px;
+        height: 30px;
+        bottom: 10px;
+        left: -20px;
+    }
+
+
+    h1:hover::before {
+        opacity: 0;
+    }
+
+
+    h1::after {
+        width: 30px;
+        height: 4px;
+        bottom: 10px;
+        left: -20px;
+    }
+
+
+    h1:hover::after {
+        animation: slideRightSmallDevice 225ms forwards;
+        transform-origin: right;
+    }
+
+
+    @keyframes slideRightSmallDevice {
+        0% {
+            transform: translateX(0);
+        }
+
+        40% {
+            transform: translateX(50px);
+            width: 50px;
+        }
+
+
+        60% {
+            transform: translateX(100px);
+            width: 100px;
+        }
+
+
+        100% {
+            transform: translateX(200px);
+            width: 150px;
+        }
+    }
+}
+
+/* Small Mobile Devices */
+
+@media (max-width: 414px) {
+    .menu {
+        height: 70vh;
+        >a {
+            >h1 {
+                font-size: 26px;
+            }
+        }
+    }
+
+    h1::before,
+    h1::after {
+        content: '';
+        position: absolute;
+        background-color: black;
+    }
+
+
+    h1::before {
+        width: 4px;
+        height: 30px;
+        bottom: 10px;
+        left: -20px;
+    }
+
+
+    h1:hover::before {
+        opacity: 0;
+    }
+
+
+    h1::after {
+        width: 30px;
+        height: 4px;
+        bottom: 10px;
+        left: -20px;
+    }
+
+
+    h1:hover::after {
+        animation: slideRightSmallDevice 225ms forwards;
+        transform-origin: right;
+    }
+
+
+    @keyframes slideRightSmallDevice {
+        0% {
+            transform: translateX(0);
+        }
+
+        40% {
+            transform: translateX(50px);
+            width: 50px;
+        }
+
+
+        60% {
+            transform: translateX(80px);
+            width: 80px;
+        }
+
+
+        100% {
+            transform: translateX(150px);
+            width: 100px;
+        }
+    }
+}
+
+@media (max-width: 330px) {
+    .menu {
+        height: 100vh;
+    }
+}
+
+
+@media (max-width: 940px) and (orientation: landscape) {
+    .menu {
+        height: 600px;
+    }
+}

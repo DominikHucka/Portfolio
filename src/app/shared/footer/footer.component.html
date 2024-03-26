@@ -1,0 +1,49 @@
+<div *ngIf="!isLegalNoticeActive && !isMenuActive" [class.hovered]="isHovered" (mouseover)="hoverEffect(true)"
+    (mouseleave)="hoverEffect(false)" class="arrow"><img src="assets/images/arrow-right.png"></div>
+<div (mouseover)="hoverEffect(true)" (mouseleave)="hoverEffect(false)" class="footer">
+    <div class="rectangle">
+        <img src="assets/images/rectangle.png">
+    </div>
+    <div class="footer-container">
+        <div class="say-hi">
+            <h2>Say Hi!</h2>
+        </div>
+        <app-contact-form *ngIf="!isLegalNoticeActive && !isMenuActive" id="contactMe"></app-contact-form>
+        <div class="footer-logo-area">
+            <div class="initial-container">
+                <div class="initials">
+                    <img src="assets/images/initials-left-white.png">
+                    <div class="d-container">
+                        <p class="d">D</p>
+                    </div>
+                    <div class="seperate"></div>
+                    <div class="h-container">
+                        <p class="h">H</p>
+                    </div>
+                    <img src="assets/images/initials-right-white.png">
+                </div>
+                <div>
+                    <span style="color: white;">© Dominik Hucka 2024</span>
+                </div>
+                <div class="legal-notice resp-notice-none">
+                    <a href="legal-notice"> <span style="color: white;">Legal notice</span></a>
+                </div>
+            </div>
+            <div class="logo">
+                <div class="logo-container">
+                    <a href="https://github.com/DominikHucka?tab=repositories"  target="_blank"><img class="footer-icon"
+                            src="assets/images/github.png"></a>
+                    <a href="mailto:dominik.hucka@googlemail.com" target="_top"><img class="footer-icon"
+                            src="assets/images/email.png"></a>
+                    <a href="https://linkedin.com/in/dominik-hucka-8978ba2bb" target="_blank"><img class="footer-icon" src="assets/images/linkedin.png"></a>
+                </div>
+                <div class="legal-notice resp-notice">
+                    <a href="legal-notice"> <span style="color: white;">Legal notice</span></a>
+                </div>
+            </div>
+            <div *ngIf="!isLegalNoticeActive && !isMenuActive" class="scroll-up">
+                <a href="#"><img class="scroll" src="assets/images/arrow-up.png"></a>
+            </div>
+        </div>
+    </div>
+</div>

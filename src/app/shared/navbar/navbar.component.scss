@@ -1,0 +1,263 @@
+@import './../mixin.component.scss';
+
+
+.header-nav {
+    display: flex;
+    align-items: center;
+    height: 120px;
+    background-color: $main_color;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 999;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+
+.nav-container {
+    @include dFlexSpace();
+    width: 100rem;
+    align-items: center;
+    margin: auto;
+    padding: 0 20px 0 20px;
+}
+
+
+.navbar {
+    gap: 5px;
+    border-radius: 2px;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+
+.btn {
+    width: 80px;
+    cursor: pointer;
+}
+
+
+span {
+    display: block;
+    width: 100%;
+    box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.3);
+    border-radius: 3px;
+    height: 5px;
+    background: black;
+    transition: all .3s;
+    position: relative;
+}
+
+
+span+span {
+    margin-top: 10px;
+}
+
+
+.active span:nth-child(1) {
+    animation: ease .7s top forwards;
+}
+
+
+.not-active span:nth-child(1) {
+    animation: ease .7s top-2 forwards;
+}
+
+
+.active span:nth-child(2) {
+    animation: ease .7s scaled forwards;
+}
+
+
+.not-active span:nth-child(2) {
+    animation: ease .7s scaled-2 forwards;
+}
+
+
+.active span:nth-child(3) {
+    animation: ease .7s bottom forwards;
+}
+
+
+.not-active span:nth-child(3) {
+    animation: ease .7s bottom-2 forwards;
+}
+
+
+@keyframes top {
+    0% {
+        top: 0;
+        transform: rotate(0);
+    }
+
+    50% {
+        top: 22px;
+        transform: rotate(0);
+    }
+
+    100% {
+        top: 22px;
+        transform: rotate(45deg);
+    }
+}
+
+
+@keyframes top-2 {
+    0% {
+        top: 22px;
+        transform: rotate(45deg);
+    }
+
+    50% {
+        top: 22px;
+        transform: rotate(0deg);
+    }
+
+    100% {
+        top: 0;
+        transform: rotate(0deg);
+    }
+}
+
+
+@keyframes bottom {
+    0% {
+        bottom: 0;
+        transform: rotate(0);
+    }
+
+    50% {
+        bottom: 22px;
+        transform: rotate(0);
+    }
+
+    100% {
+        bottom: 22px;
+        transform: rotate(135deg);
+    }
+}
+
+
+@keyframes bottom-2 {
+    0% {
+        bottom: 22px;
+        transform: rotate(135deg);
+    }
+
+    50% {
+        bottom: 22px;
+        transform: rotate(0);
+    }
+
+    100% {
+        bottom: 0;
+        transform: rotate(0);
+    }
+}
+
+
+@keyframes scaled {
+    50% {
+        transform: scale(0);
+    }
+
+    100% {
+        transform: scale(0);
+    }
+}
+
+
+@keyframes scaled-2 {
+    0% {
+        transform: scale(0);
+    }
+
+    50% {
+        transform: scale(0);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+.initials {
+    display: flex;
+    position: relative;
+    gap: 50px;
+    height: 35px;
+}
+
+
+.d,
+.h {
+    font-size: 44px;
+    font-weight: 800;
+    color: black;
+}
+
+
+.d-container {
+    position: absolute;
+    top: -8px;
+    left: 12px;
+}
+
+
+.h-container {
+    position: absolute;
+    right: 14px;
+    bottom: -16px;
+}
+
+
+.seperate {
+    position: absolute;
+    background-color: $main_color;
+    width: 6px;
+    height: 42px;
+    left: 34px;
+    rotate: 8deg;
+    z-index: 1;
+}
+
+
+/* Small Mobile Devices */
+
+
+@media (max-width: 414px) {
+    .btn {
+        width: 50px;
+    }
+
+    .initials {
+        height: 30px;
+        gap: 34px;
+    }
+
+    .d,
+    .h {
+        font-size: 28px;
+    }
+
+    .d-container {
+        top: -5px;
+        left: 12px;
+    }
+
+    .h-container {
+        right: 12px;
+        bottom: -11px;
+    }
+
+    .seperate {
+        left: 28px;
+        width: 3px;
+    }
+}

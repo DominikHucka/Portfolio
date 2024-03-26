@@ -1,0 +1,296 @@
+@import './../mixin.component.scss';
+
+
+.arrow {
+    display: flex;
+    justify-content: start;
+    margin: 0 100px 100px 0;
+    @include transitionArrowBack(0, 0);
+}
+
+
+.arrow.hovered {
+    @include transitionArrow(50px, 50px);
+}
+
+
+.rectangle {
+    display: flex;
+    position: relative;
+    transform: translateY(1px);
+
+    >img {
+        width: 100%;
+    }
+}
+
+
+.footer {
+    @include flexDirectionColumn();
+    width: 100%;
+    position: absolute;
+    right: 0;
+    left: 0;
+}
+
+
+.footer-container {
+    background-color: black;
+}
+
+
+.say-hi {
+    display: flex;
+    @include marginAuto();
+
+    >h2 {
+        font-size: 78px;
+        color: white;
+        text-align: start;
+        transition: all ease-in-out 225ms;
+        margin-bottom: 100px;
+
+        &:hover {
+            color: #5988FF;
+        }
+    }
+}
+
+
+.footer-logo-area {
+    @include dFlexSpace();
+    @include marginAuto();
+    margin-bottom: 50px;
+    position: relative;
+}
+
+
+.initial-container {
+    @include flexDirectionColumn();
+    gap: 5px;
+}
+
+
+.initials {
+    display: flex;
+    position: relative;
+    gap: 50px;
+    height: 35px;
+}
+
+
+.d,
+.h {
+    font-size: 44px;
+    font-weight: 800;
+    color: white;
+}
+
+
+.d-container {
+    position: absolute;
+    top: -8px;
+    left: 12px;
+}
+
+
+.h-container {
+    position: absolute;
+    right: 101px;
+    bottom: -16px;
+}
+
+
+.seperate {
+    position: absolute;
+    background-color: black;
+    width: 6px;
+    height: 42px;
+    left: 34px;
+    rotate: 8deg;
+    z-index: 1;
+}
+
+
+.logo {
+    @include flexDirectionColumn();
+    align-items: end;
+    gap: 10px;
+}
+
+
+.logo-container {
+    display: flex;
+    gap: 20px;
+}
+
+
+.scroll-up {
+    position: absolute;
+    bottom: 100px;
+    right: 1%;
+    animation: wiggle 1s forwards infinite;
+}
+
+
+@keyframes wiggle {
+    0% {
+        transform: translateY(0);
+    }
+
+    40% {
+        transform: translateY(-20px);
+    }
+
+    60% {
+        transform: translateY(-25px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+
+.footer-icon {
+    &:hover {
+        cursor: pointer;
+        transition: all 225ms ease-in-out;
+        transform: translateY(-5px);
+    }
+}
+
+
+.legal-notice {
+    &:hover {
+        cursor: pointer;
+        >a {
+            >span::after {
+                content: '';
+                position: absolute;
+                width: 50px;
+                background-color: #5988FF;
+                height: 2px;
+                bottom: 0;
+                right: 20px;
+                animation: lineOut 225ms ease-in-out;
+                transform-origin: left;
+            }
+        }
+    }
+}
+
+
+@keyframes lineOut {
+    0% {
+        transform: translateX(-90px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+
+/* Big Mobile Devices */
+
+@media (min-width: 577px) {
+    .resp-notice-none {
+        display: none;
+    }
+}
+
+
+@media (max-width: 576px) {
+    .arrow {
+        margin: 0 50px 80px 0;
+
+        >img {
+            height: 150px;
+            width: auto;
+        }
+    }
+
+    .say-hi {
+        >h2 {
+            font-size: 50px;
+        }
+    }
+
+    .scroll-up {
+        display: none;
+    }
+
+
+    .footer-logo-area {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+
+
+    .resp-notice {
+        display: none;
+    }
+
+
+    .logo-container {
+        gap: 50px;
+    }
+
+
+    .initial-container {
+        justify-content: center;
+        align-items: center;
+    }
+
+    .h-container {
+        right: 12px;
+    }
+
+
+    .legal-notice {
+        &:hover {
+            cursor: pointer;
+            >a {
+                >span::after {
+                    content: '';
+                    position: absolute;
+                    width: 50px;
+                    background-color: #5988FF;
+                    height: 2px;
+                    bottom: 0;
+                    right: 215px;
+                    animation: lineOutSmallDevice 225ms ease-in-out;
+                    transform-origin: left;
+                }
+            }
+        }
+    }
+
+    @keyframes lineOutSmallDevice {
+        0% {
+            transform: translateX(-90px);
+            opacity: 0;
+        }
+    
+        100% {
+            transform: translateX(0);
+            opacity: 1;
+        }
+    }
+}
+
+/* Small Mobile Devices */
+
+@media (max-width: 414px) {
+    .say-hi {
+        >h2 {
+            font-size: 32px;
+        }
+    }
+}

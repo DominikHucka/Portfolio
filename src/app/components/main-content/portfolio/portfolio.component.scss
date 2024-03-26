@@ -1,0 +1,425 @@
+@import './../../../shared/mixin.component.scss';
+
+
+.portfolio {
+    @include dFlexCenter();
+    flex-direction: column;
+    margin-top: 50px;
+
+    >h2 {
+        font-size: 78px;
+        font-weight: 800;
+        margin-bottom: 50px;
+    }
+
+    >span {
+        font-size: 23px;
+        font-weight: 400;
+        margin-bottom: 100px;
+    }
+}
+
+
+.portfolio-container {
+    position: relative;
+    @include flexDirectionColumn();
+    gap: 100px
+}
+
+
+.projects-container  {
+    @include dFlexSpace();
+    filter: grayscale(100%);
+    gap: 80px;
+
+    &:hover {
+        filter: grayscale(0);
+    }
+}
+
+
+.projects {
+    position: relative;
+    z-index: 10;
+}
+
+
+.border-container {
+    position: relative;
+}
+
+
+.border {
+    position: absolute;
+    left: 20px;
+    top: 20px;
+}
+
+
+.d-none {
+    display: none;
+}
+
+
+.border-arrow {
+    position: absolute;
+    top: 160px;
+    right: -32px;
+}
+
+
+.portfolio-number {
+    >span {
+        font-family: 'Syne', Arial, Helvetica, sans-serif;
+        font-size: 48px;
+        font-weight: 700;
+    }
+}
+
+
+.arrow {
+    display: flex;
+    margin: 50px 0 0 100px;
+    @include transitionArrowBack(0, 0);
+}
+
+
+.arrow.hovered {
+    @include transitionArrow(50px, 50px);
+}
+
+
+.project-overlay {
+    @include flexDirectionColumn();
+    position: absolute;
+    top: 25%;
+    opacity: 0;
+    gap: 10px;
+}
+
+
+
+.test-button {
+    display: flex;
+
+    >a {
+        >button {
+            width: 164px;
+            height: 68px;
+            padding: 20px, 60px, 20px, 60px;
+            border: 4px;
+            gap: 10px;
+            border: 4px solid black;
+            background-color: $main_color;
+            font-family: 'Overpass', Arial, Helvetica, sans-serif;
+            font-size: 23px;
+            font-weight: 400;
+            text-align: center;
+            transition: transform 225ms ease;
+            transform-origin: left center;
+        }
+    }
+}
+
+
+.test-button > a > button:hover {
+    cursor: pointer;
+    transform: scaleX(1.1);
+}
+
+
+.slideInAnimation {
+    animation: slideIn 225ms forwards;
+}
+
+
+.slideOutAnimation {
+    animation: slideOut 225ms forwards;
+}
+
+
+@keyframes slideIn {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(100%);
+        opacity: 1;
+        left: 150px;
+    }
+}
+
+@keyframes slideOut {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-100%);
+        opacity: 1;
+        right: 150px;
+    }
+}
+
+
+
+.spinning {
+    animation: spin 225ms forwards;
+}
+
+
+@keyframes spin {
+    0% {
+        transform: rotate(0) scale(1);
+    }
+
+    100% {
+        transform: rotate(-135deg) scale(1.2);
+    }
+}
+
+
+.project-text {
+    text-align: start;
+
+    >h2 {
+        font-size: 45px;
+        font-weight: 800;
+    }
+}
+
+
+.description {
+    font-size: 23px;
+    color: $light_blue;
+}
+
+
+/* Große Desktops */
+
+@media (min-width: 1201px) {
+    .number-none {
+        display: none;
+    }
+}
+
+@media (max-width: 1200px) {
+    .portfolio-container {
+        gap: 300px;
+        margin-bottom: 300px;
+    }
+
+    .projects-container {
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .number-show {
+        display: none;
+    }
+
+    .slideInAnimation {
+        animation: slideInSmallScreen 225ms forwards;
+    }
+    
+    .slideOutAnimation {
+        animation: slideOutSmallScreen 225ms forwards;
+    }
+    
+    @keyframes slideInSmallScreen {
+        0% {
+            transform: translateY(0);
+        }
+        100% {
+            transform: translateY(100%);
+            opacity: 1;
+            top: 60%;
+        }
+    }
+    
+    @keyframes slideOutSmallScreen {
+        0% {
+            transform: translateY(0);
+        }
+        100% {
+            transform: translateY(100%);
+            opacity: 1;
+            top: 60%;
+        }
+    }
+
+
+    .spinning {
+        animation: spinSmallScreen 225ms forwards;
+    }
+    
+    
+    @keyframes spinSmallScreen {
+        0% {
+            transform: rotate(0) scale(1);
+        }
+    
+        100% {
+            transform: rotate(35deg) scale(1.2);
+        }
+    }
+}
+
+
+/* Tablets */
+
+@media (max-width: 768px) {
+    .portfolio {
+        >h2 {
+            font-size: 50px;
+        }
+        >span {
+            font-size: 18px;
+        }
+    }
+
+
+    .projects {
+        >div {
+            >img {
+                width: 100%;
+                height: auto;
+            }
+        }
+    }
+
+
+    .border-container {
+        >img {
+            width: 100%;
+            height: auto;
+        }
+    }
+}
+
+
+/* Big Mobile Devices */
+
+@media (max-width: 576px) {
+    .arrow {
+        margin: 0 50px 80px 0;
+
+        >img {
+            height: 150px;
+            width: auto;
+        }
+    }
+
+    
+    .projects-container  {
+        filter: grayscale(0);
+    }
+
+    .project-overlay {
+        position: relative;
+        opacity: 1;
+    }
+
+
+    .portfolio-container {
+        gap: 50px;
+        margin-bottom: 0;
+    }
+
+
+    .project-text {
+        >h2 {
+            font-size: 32px;
+        }
+        >span {
+            font-size: 16px;
+        }
+    }
+
+
+    .test-button {
+        >a {
+            >button {
+                width: 132px;
+                height: 55px;
+                font-size: 16px;
+            }
+        }
+    }
+
+
+    .description {
+        font-size: 18px !important;
+    }
+}
+
+/* Small Mobile Devices */
+
+@media (max-width: 414px) {
+    .portfolio {
+        >h2 {
+            font-size: 26px;
+        }
+        >span {
+            font-size: 16px;
+        }
+    }
+}
+
+
+@media (max-width: 940px) and (orientation: landscape) {
+    .arrow {
+        margin: 0 50px 80px 0;
+
+        >img {
+            height: 150px;
+            width: auto;
+        }
+    }
+
+    
+    .projects-container  {
+        filter: grayscale(0);
+    }
+
+    .project-overlay {
+        position: relative;
+        opacity: 1;
+    }
+
+
+    .portfolio-container {
+        gap: 50px;
+        margin-bottom: 0;
+    }
+
+
+    .project-text {
+        >h2 {
+            font-size: 32px;
+        }
+        >span {
+            font-size: 16px;
+        }
+    }
+
+
+    .test-button {
+        >a {
+            >button {
+                width: 132px;
+                height: 55px;
+                font-size: 16px;
+            }
+        }
+    }
+
+
+    .description {
+        font-size: 18px !important;
+    }
+}
+
+
