@@ -86,10 +86,6 @@
 
 @media (max-width: 1200px) {
 
-    .skills-logo {
-        gap: 100px;
-    }
-
     .border-skills {
         padding: 80px;
     }
@@ -112,7 +108,7 @@
 @media (max-width: 992px) {
     
     .border-skills {
-        padding: 20px;
+        padding: 40px;
     }
 
     .skills-logo {
@@ -126,17 +122,7 @@
 @media (max-width: 768px) {
 
     .border-skills {
-        padding: 20px;
-    }
-
-    .skills-logo {
-        gap: 50px;
-        >div {
-            >img {
-                width: 50px;
-                height: auto;
-            }
-        }
+        padding: 40px;
     }
 
     .blue-effect {
@@ -167,6 +153,15 @@
         }
     }
 
+    .skills-logo {
+        >div {
+            >img {
+                width: 50px;
+                height: auto;
+            }
+        }
+    }
+
     .my-skills-text {
         width: 200px;
         top: -20px;
@@ -190,10 +185,9 @@
     }
 
     .skills-logo {
-        gap: 40px;
         >div {
             >img {
-                width: 30px;
+                width: 40px;
                 height: auto;
             }
         }
