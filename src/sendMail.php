@@ -17,7 +17,6 @@ switch ($_SERVER['REQUEST_METHOD']) {
             $email = $params->email;
             $name = $params->name;
             $message = $params->message;
-            $checkboxPolicy = $params->$checkboxPolicy;
     
             $recipient = 'dominikhucka@googlemail.com';  
             $subject = "Contact From <$email>";

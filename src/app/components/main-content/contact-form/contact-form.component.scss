@@ -41,24 +41,24 @@
 
 
 .button-valid {
-    border: solid 4px #dfdfdf;
-    color: #dfdfdf;
+    &:hover {
+        cursor: pointer;
+        border: solid 4px #ffffff;
+        color: #ffffff;
+    }
 }
 
 
 .button {
     min-width: 269px;
     height: 68px;
-    border: solid 4px #BBBBBB;
+    border: solid 3px #BBBBBB;
     background-color: black;
     color: #BBBBBB;
     font-size: 23px;
     font-weight: 400;
-
-    &:hover {
-        cursor: pointer;
-    }
 }
+
 
 
 .form-validation-container {
@@ -201,17 +201,6 @@ label {
     right: 30px;
 }
 
-
-/* Große Desktops */
-
-@media (max-width: 1200px) {
-}
-
-/* Desktops */
-
-@media (max-width: 992px) {
-}
-
 /* Tablets */
 
 @media (max-width: 768px) {
@@ -221,8 +210,7 @@ label {
     }
 }
 
-@media (min-width: 578px) {
-}
+@media (min-width: 578px) {}
 
 /* Big Mobile Devices */
 
@@ -231,6 +219,7 @@ label {
         >p {
             font-size: 22px !important;
         }
+
         >span {
             font-size: 16px;
         }
@@ -247,6 +236,6 @@ label {
 
 @media (max-width: 414px) {
     .form-text {
-       width: auto;
+        width: auto;
     }
 }

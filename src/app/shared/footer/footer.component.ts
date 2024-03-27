@@ -3,12 +3,13 @@ import { Component } from '@angular/core';
 import { ContactFormComponent } from '../../components/main-content/contact-form/contact-form.component';
 import { NavigationEnd, Router } from '@angular/router';
 import { filter } from 'rxjs';
+import { SuccsessComponent } from '../../components/overlay/succsess/succsess.component';
 
 
 @Component({
   selector: 'app-footer',
   standalone: true,
-  imports: [CommonModule, ContactFormComponent],
+  imports: [CommonModule, ContactFormComponent, SuccsessComponent],
   templateUrl: './footer.component.html',
   styleUrl: './footer.component.scss'
 })

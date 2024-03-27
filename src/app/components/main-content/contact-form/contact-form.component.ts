@@ -3,7 +3,6 @@ import { HttpClient } from '@angular/common/http';
 import { Component, inject } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
 
-
 @Component({
   selector: 'app-contact-form',
   standalone: true,
@@ -68,7 +67,7 @@ export class ContactFormComponent {
       this.http.post(this.post.endPoint, this.post.body(this.contactData))
         .subscribe({
           next: (response) => {
-
+            console.log('Erfolgreiche Antwort vom Server:', response);
             ngForm.resetForm();
           },
           error: (error) => {
@@ -77,7 +76,6 @@ export class ContactFormComponent {
           complete: () => console.info('send post complete'),
         });
     } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
-
       ngForm.resetForm();
       this.submitAttempted = false;
     }
