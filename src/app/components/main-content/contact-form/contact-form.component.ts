@@ -2,11 +2,12 @@ import { CommonModule } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 import { Component, inject } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
+import { SuccsessComponent } from '../../overlay/succsess/succsess.component';
 
 @Component({
   selector: 'app-contact-form',
   standalone: true,
-  imports: [CommonModule, FormsModule],
+  imports: [CommonModule, FormsModule, SuccsessComponent],
   templateUrl: './contact-form.component.html',
   styleUrl: './contact-form.component.scss'
 })
@@ -22,6 +23,8 @@ export class ContactFormComponent {
 
 
   http = inject(HttpClient);
+  animateSuccsess: any;
+
 
 
   styleElement() {
@@ -50,7 +53,7 @@ export class ContactFormComponent {
 
 
   post = {
-    endPoint: 'https://deineDomain.de/sendMail.php',
+    endPoint: 'https://dominikhucka.de/sendMail.php',
     body: (payload: any) => JSON.stringify(payload),
     options: {
       headers: {

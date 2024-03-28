@@ -45,7 +45,9 @@ input:-webkit-autofill {
     border: 0;
     text-decoration: none;
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
+
 
 
 html {
@@ -55,7 +57,6 @@ html {
     background-color: #FFFCF3;
     padding: 0 20px 0 20px;
     font-family: Roboto, "Helvetica Neue", sans-serif;
-    overflow-x: hidden;
 }
 
 

@@ -10,4 +10,10 @@ import { Component } from '@angular/core';
 })
 export class SuccsessComponent {
 
+  showSucssess = false;
+
+
+  animateSuccsess() {
+    this.showSucssess = true;
+  }
 }

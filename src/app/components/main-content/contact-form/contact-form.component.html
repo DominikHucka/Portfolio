@@ -76,13 +76,14 @@
         </div>
 
         <div class="button-container">
-            <button [ngClass]="{'button-valid': checkbox.valid && message.valid && email.valid && name.valid}" class="button" type="submit">
+            <button [class.show-succsess]="animateSuccsess" [ngClass]="{'button-valid': checkbox.valid && message.valid && email.valid && name.valid}" class="button" type="submit">
                 Send message
             </button>
         </div>
     </form>
 </div>
 
+<app-succsess></app-succsess>
 
 <div [class.showOverlay]="isVisible" class="privacy-policy">
     <div class="privacy-contianer">
