@@ -1,7 +1,7 @@
 .succsess {
     background-color: white;
     display: flex;
-    position: absolute;
+    position: fixed;
     width: 400px;
     height: 100px;
     bottom: 500px;
@@ -11,8 +11,9 @@
     margin-right: auto; 
     border-radius: 10px;
     padding: 20px 10px 20px 10px;
-    transition: transform 225ms ease-in;
+    transition: transform .5s ease-in-out;
     transform: translateX(1000%);
+    // animation: fadeInAndOut  1s forwards ease-in-out;
     z-index: 900;
     >p {
         font-size: 23px;
@@ -23,3 +24,18 @@
 .show-succsess {
     transform: translate(0);
 }
+
+
+// @keyframes fadeInAndOut {
+//     0% {
+//         translateX: (1000%);
+//     }
+
+//     50% {
+//         translateX: (0);
+//     }
+
+//     100% {
+//         translateX: (1000%);
+//     }
+// }

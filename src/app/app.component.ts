@@ -17,7 +17,7 @@ import { MainContentComponent } from './components/main-content/main-content.com
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })
-export class AppComponent {
+export class AppComponent  {
   title = 'Dominik Hucka';
 
 }

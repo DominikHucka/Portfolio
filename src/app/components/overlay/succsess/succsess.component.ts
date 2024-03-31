@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { FunctionDataService } from '../../../services/function-data.service';
 
 @Component({
   selector: 'app-succsess',
@@ -10,10 +11,5 @@ import { Component } from '@angular/core';
 })
 export class SuccsessComponent {
 
-  showSucssess = false;
-
-
-  animateSuccsess() {
-    this.showSucssess = true;
-  }
+  function = inject(FunctionDataService); 
 }

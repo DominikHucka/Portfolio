@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component, inject } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
 import { SuccsessComponent } from '../../overlay/succsess/succsess.component';
+import { FunctionDataService } from '../../../services/function-data.service';
 
 @Component({
   selector: 'app-contact-form',
@@ -22,9 +23,18 @@ export class ContactFormComponent {
   submitAttempted = false;
 
 
+  function = inject(FunctionDataService);
   http = inject(HttpClient);
   animateSuccsess: any;
+  succsess: any;
 
+
+
+  // show(ngForm: NgForm) {
+  //   if(ngForm.submitted) {
+  //     this.function.showOverlay();
+  //   }
+  // }
 
 
   styleElement() {
@@ -67,6 +77,7 @@ export class ContactFormComponent {
   onSubmit(ngForm: NgForm) {
     this.submitAttempted = true;
     if (ngForm.submitted && ngForm.form.valid && !this.mailTest) {
+      this.function.showOverlay();
       this.http.post(this.post.endPoint, this.post.body(this.contactData))
         .subscribe({
           next: (response) => {
@@ -81,6 +92,9 @@ export class ContactFormComponent {
     } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
       ngForm.resetForm();
       this.submitAttempted = false;
+      this.function.showOverlay();
     }
   }
 }
+
+
