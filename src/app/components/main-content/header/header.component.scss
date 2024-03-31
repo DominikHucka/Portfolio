@@ -249,6 +249,15 @@
 }
 
 
+@media (max-width: 330px) {
+    .email-adress {
+        >a {
+            transform: translate(-160px, -60px);
+        }
+    }
+}
+
+
 @media (orientation: landscape) {
     .email-adress {
         rotate: 0deg;

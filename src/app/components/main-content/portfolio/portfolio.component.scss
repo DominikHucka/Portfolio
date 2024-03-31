@@ -369,6 +369,19 @@
 }
 
 
+@media (max-width: 330px) {
+    .test-button {
+        >a {
+            >button {
+                width: 100px;
+                height: 55px;
+                font-size: 16px;
+            }
+        }
+    }
+}
+
+
 @media (max-width: 940px) and (orientation: landscape) {
     .arrow {
         margin: 0 50px 80px 0;

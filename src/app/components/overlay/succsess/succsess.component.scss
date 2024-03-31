@@ -13,7 +13,6 @@
     padding: 20px 10px 20px 10px;
     transition: transform .5s ease-in-out;
     transform: translateX(1000%);
-    // animation: fadeInAndOut  1s forwards ease-in-out;
     z-index: 900;
     >p {
         font-size: 23px;
@@ -26,16 +25,13 @@
 }
 
 
-// @keyframes fadeInAndOut {
-//     0% {
-//         translateX: (1000%);
-//     }
-
-//     50% {
-//         translateX: (0);
-//     }
-
-//     100% {
-//         translateX: (1000%);
-//     }
-// }
+@media (max-width: 375px) {
+    .succsess {
+        bottom: 400px;
+        width: 300px;
+        >p {
+            font-size: 16px;
+            text-align: center;
+        }
+    }
+} 

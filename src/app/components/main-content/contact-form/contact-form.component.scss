@@ -210,18 +210,18 @@ label {
     }
 }
 
-@media (min-width: 578px) {}
 
 /* Big Mobile Devices */
 
 @media (max-width: 576px) {
     .form-text {
+        padding: 20px;
         >p {
             font-size: 22px !important;
         }
 
         >span {
-            font-size: 16px;
+            font-size: 14px;
         }
     }
 
