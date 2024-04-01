@@ -175,7 +175,7 @@
 
 @media (max-width: 414px) {
     .my-skills-text {
-        top: -25px;
+        top: -20px;
         width: 80%;
         left: 10%;
         right: 10%;
@@ -186,6 +186,7 @@
 
     .skills-logo {
         >div {
+            margin-top: 10px;
             >img {
                 width: 40px;
                 height: auto;

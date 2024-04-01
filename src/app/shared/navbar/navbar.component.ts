@@ -40,10 +40,6 @@ export class NavbarComponent {
 
   switchLanguage(language: string) {
     this.translate.switchLanguage(language);
-  }
-
-
-  activeLanguage() {
-    this.function.active();
+    this.function.setActiveLanguage(language);
   }
 }

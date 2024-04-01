@@ -163,12 +163,6 @@ h1:hover::after {
     }
 }
 
-/* Tablets */
-
-@media (max-width: 768px) {}
-
-@media (min-width: 578px) {}
-
 /* Big Mobile Devices */
 
 @media (max-width: 576px) {
@@ -317,6 +311,14 @@ h1:hover::after {
 @media (max-width: 330px) {
     .menu {
         height: 100vh;
+    }
+
+    .menu {
+        >a {
+            >h1 {
+                font-size: 22px;
+            }
+        }
     }
 }
 

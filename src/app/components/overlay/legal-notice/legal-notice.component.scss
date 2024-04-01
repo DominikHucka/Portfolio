@@ -20,3 +20,25 @@
     justify-content: center;
     @include btn();
 }
+
+
+@media (max-width: 576px) {
+    .legal-notice {
+        >div {
+            h2 {
+                font-size: 22px;
+            }
+        }
+    }
+}
+
+
+@media (max-width: 412px) {
+    .legal-notice {
+        >div {
+            h2 {
+                font-size: 18px;
+            }
+        }
+    }
+}

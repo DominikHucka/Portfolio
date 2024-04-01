@@ -77,5 +77,23 @@
                 "description": "Wir behalten uns das Recht vor, diese Datenschutzrichtlinie zu ändern. Wir werden Sie angemessen über alle wesentlichen Änderungen informieren. Die fortgesetzte Nutzung unserer Website nach solchen Änderungen gilt als Ihre Zustimmung zu unseren aktualisierten Praktiken."
             }
         ]
+    },
+    "legalNoticeContainer": {
+        "legalNotice": {
+            "title": "Impressum",
+            "content": "Dominik Hucka\nPeteräcker 6\n72581 Dettingen\nDeutschland\nE-Mail: dominik.hucka@googlemail.com"
+        },
+        "responsibleForContent": {
+            "title": "Inhaltlich Verantwortlicher",
+            "content": "Dominik Hucka (Adresse wie oben)"
+        },
+        "disclaimer": {
+            "title": "Haftungsausschluss",
+            "content": "Die Inhalte unserer Seiten wurden mit größter Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte können wir jedoch keine Gewähr übernehmen. Nach den allgemeinen Gesetzen sind wir für eigene Inhalte auf diesen Seiten verantwortlich. Wir sind als Diensteanbieter jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen. Verpflichtungen zur Entfernung oder Sperrung der Nutzung von Informationen nach den allgemeinen Gesetzen bleiben hiervon unberührt nach §§ 8 bis 10 des Telemediengesetzes (TMG)."
+        },
+        "copyrightNotice": {
+            "title": "Urheberrechtshinweis",
+            "content": "Alle Inhalte und Werke auf diesen Webseiten, die vom Seitenbetreiber erstellt wurden, unterliegen dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung sowie jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers. Downloads und Kopien dieser Seite sind nur für den privaten, nicht kommerziellen Gebrauch gestattet. Soweit die Inhalte auf dieser Seite nicht vom Betreiber erstellt wurden, werden die Urheberrechte Dritter beachtet. Insbesondere werden Inhalte Dritter als solche gekennzeichnet. Sollten Sie trotzdem auf eine Urheberrechtsverletzung aufmerksam werden, bitten wir um einen entsprechenden Hinweis. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Inhalte umgehend entfernen."
+        }
     }
 }

@@ -5,8 +5,9 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class FunctionDataService {
-  isActive = false;
   overlay = false;
+  currentLanguage = 'en';
+  fontColorBlack = 'black';
 
   constructor() { }
 
@@ -19,7 +20,12 @@ export class FunctionDataService {
   }
 
 
-  active() {
-    this.isActive = true;
+  setActiveLanguage(lang: string) {
+    this.currentLanguage = lang;
+  }
+
+  
+  isLanguageActive(lang: string): boolean {
+    return this.currentLanguage === lang;
   }
 }
