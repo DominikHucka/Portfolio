@@ -4,7 +4,7 @@ import { LegalNoticeComponent } from './components/overlay/legal-notice/legal-no
 import { MenuComponent } from './components/overlay/menu/menu.component';
 
 export const routes: Routes = [
-    { path: '', pathMatch: 'full' ,component: MainContentComponent, data: { animation: 'mainPage' } },
+    { path: '', component: MainContentComponent },
     { path: 'legal-notice', component: LegalNoticeComponent },
-    { path: 'menu', pathMatch: 'full' ,component: MenuComponent, data: { animation: 'menuPage' } },
+    { path: 'menu', component: MenuComponent },
 ];
