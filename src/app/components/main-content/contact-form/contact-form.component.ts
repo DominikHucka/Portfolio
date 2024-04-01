@@ -4,11 +4,12 @@ import { Component, inject } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
 import { SuccsessComponent } from '../../overlay/succsess/succsess.component';
 import { FunctionDataService } from '../../../services/function-data.service';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-contact-form',
   standalone: true,
-  imports: [CommonModule, FormsModule, SuccsessComponent],
+  imports: [CommonModule, FormsModule, SuccsessComponent, TranslateModule],
   templateUrl: './contact-form.component.html',
   styleUrl: './contact-form.component.scss'
 })
@@ -27,14 +28,6 @@ export class ContactFormComponent {
   http = inject(HttpClient);
   animateSuccsess: any;
   succsess: any;
-
-
-
-  // show(ngForm: NgForm) {
-  //   if(ngForm.submitted) {
-  //     this.function.showOverlay();
-  //   }
-  // }
 
 
   styleElement() {

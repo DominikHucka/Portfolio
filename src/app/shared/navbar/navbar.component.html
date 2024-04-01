@@ -13,13 +13,18 @@
                 <img src="assets/images/initial-right.png">
             </div>
         </a>
-        <div class="navbar">
-            
-            <div (click)="toggleActiveAndNavigate()" [class.active]="isActive" [class.not-active]="!isActive"
-                class="btn not-active">
-                <span></span>
-                <span></span>
-                <span></span>
+        <div class="nav-trans-container">
+            <div class="language">
+                <p [class.isActiveLanguage]="activeLanguage()" (click)="switchLanguage('en')">EN</p>
+                <p [class.isActiveLanguage]="activeLanguage()" (click)="switchLanguage('de')">DE</p>
+            </div>
+            <div class="navbar">
+                <div (click)="toggleActiveAndNavigate()" [class.active]="isActive" [class.not-active]="!isActive"
+                    class="btn not-active">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
             </div>
         </div>
     </div>

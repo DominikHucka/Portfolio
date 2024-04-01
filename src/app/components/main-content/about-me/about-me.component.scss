@@ -8,7 +8,6 @@
     >h2 {
         font-size: 78px;
         margin-bottom: 50px;
-        width: 40rem;
     }
 }
 
@@ -33,7 +32,6 @@
 .lets-talk {
     @include dFlexCenter();
     border: 4px solid;
-    padding: 20px 60px 20px 60px;
     gap: 10px;
     width: 250px;
     height: 68px;

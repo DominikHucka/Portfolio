@@ -1,6 +1,8 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { Router, RouterLink, RouterLinkActive } from '@angular/router';
+import { TranslationService } from '../../services/translation.service';
+import { FunctionDataService } from '../../services/function-data.service';
 
 @Component({
   selector: 'app-navbar',
@@ -12,6 +14,10 @@ import { Router, RouterLink, RouterLinkActive } from '@angular/router';
 export class NavbarComponent {
 [x: string]: any;
   isActive: boolean = false;
+
+
+  translate = inject(TranslationService);
+  function = inject(FunctionDataService);
 
 
   constructor(private router: Router) {}
@@ -29,5 +35,15 @@ export class NavbarComponent {
 
   toggleActive() {
     this.isActive = !this.isActive;
+  }
+
+
+  switchLanguage(language: string) {
+    this.translate.switchLanguage(language);
+  }
+
+
+  activeLanguage() {
+    this.function.active();
   }
 }

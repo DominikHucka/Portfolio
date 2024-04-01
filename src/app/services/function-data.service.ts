@@ -5,7 +5,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class FunctionDataService {
-
+  isActive = false;
   overlay = false;
 
   constructor() { }
@@ -16,5 +16,10 @@ export class FunctionDataService {
     setTimeout(() => {
       this.overlay = false;
     }, 3000);
+  }
+
+
+  active() {
+    this.isActive = true;
   }
 }

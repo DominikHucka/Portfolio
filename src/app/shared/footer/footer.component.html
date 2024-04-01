@@ -6,7 +6,7 @@
     </div>
     <div class="footer-container">
         <div class="say-hi">
-            <h2>Say Hi!</h2>
+            <h2>{{'sayHi' | translate}}</h2>
         </div>
         <app-contact-form *ngIf="!isLegalNoticeActive && !isMenuActive" id="contactMe"></app-contact-form>
         <div class="footer-logo-area">
@@ -38,7 +38,7 @@
                     <a href="https://linkedin.com/in/dominik-hucka-8978ba2bb" target="_blank"><img class="footer-icon" src="assets/images/linkedin.png"></a>
                 </div>
                 <div class="legal-notice resp-notice">
-                    <a href="legal-notice"> <span style="color: white;">Legal notice</span></a>
+                    <a href="legal-notice"> <span style="color: white;">{{'legalNotice' | translate}}</span></a>
                 </div>
             </div>
             <div *ngIf="!isLegalNoticeActive && !isMenuActive" class="scroll-up">

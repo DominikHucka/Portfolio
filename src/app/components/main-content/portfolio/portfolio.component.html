@@ -4,7 +4,7 @@
 <div (mouseover)="hoverEffect(true)" (mouseleave)="hoverEffect(false)" class="portfolio">
     <h2>Portfolio</h2>
     <span>
-        Feel free to try out my latest development projects...
+       {{'portfolio.intro' | translate}}
     </span>
 </div>
 <div data-aos="fade-up" data-aos-duration="1500" (mouseenter)="hoverEffect(true)" (mouseleave)="hoverEffect(false)"
@@ -35,8 +35,7 @@
                 <br>
                 <br>
                 <span>
-                    Task manager inspired by the Kanban System. Create and organize tasks using <br> drag and drop
-                    functions, assign users and categories.
+                    {{'portfolio.join' | translate}}
                 </span>
             </div>
             <div style="display: flex; gap: 20px;">
@@ -86,8 +85,7 @@
                 <br>
                 <br>
                 <span>
-                    Jump, run and throw game based on object-oriented approach. <br> Help Pepe to find coins and tabasco
-                    salsa to fight against the crazy hen.
+                   {{'portfolio.elPolloLoco' | translate}}
                 </span>
             </div>
             <div style="display: flex; gap: 20px;">

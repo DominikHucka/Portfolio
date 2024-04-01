@@ -1,18 +1,18 @@
 <div class="form-container">
     <div class="form-text">
-        <p>Want to discuss a new Project?</p>
+        <p>{{'discussProject' | translate}}</p>
         <span>
-            Say hello! let's disccus your ideas and make it happen
+            {{'descriptionProject' | translate}}
         </span>
     </div>
     <form class="form-validation-container" (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
 
         <div class="form-group">
             <input #name="ngModel" [(ngModel)]="contactData.name" type="text" id="name" name="name" class="input-field" required>
-            <label [class.active]="name.value" for="name">Your name</label>
+            <label [class.active]="name.value" for="name">{{'yourName' | translate}}</label>
             @if (!name.valid && (name.touched || submitAttempted)) {
             <div class="valid-text">
-                <span [ngStyle]="{'color': red}">Your name is required</span>
+                <span [ngStyle]="{'color': red}">{{'required.name' | translate}}</span>
             </div>
             <div class="invalid-image">
                 <img src="assets/images/vaild-image.png">
@@ -27,10 +27,10 @@
         <div class="form-group">
             <input #email="ngModel" [(ngModel)]="contactData.email" type="email" id="email" name="email"
                 class="input-field" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" required>
-            <label [class.active]="email.value" for="email">Your email</label>
+            <label [class.active]="email.value" for="email">{{'yourEmail' | translate}}</label>
             @if (!email.valid && (email.touched || submitAttempted)) {
             <div class="valid-text">
-                <span [ngStyle]="{'color': red}">Your email is required</span>
+                <span [ngStyle]="{'color': red}">{{'required.email' | translate}}</span>
             </div>
             <div class="invalid-image">
                 <img src="assets/images/vaild-image.png">
@@ -45,10 +45,10 @@
         <div class="form-group">
             <textarea #message="ngModel" [(ngModel)]="contactData.message" name="message" id="message" cols="30"
                 rows="10" class="textarea" required></textarea>
-            <label [class.active]="message.value" for="message">Your message</label>
+            <label [class.active]="message.value" for="message">{{'yourMessage' | translate}}</label>
             @if (!message.valid && (message.touched || submitAttempted)) {
             <div class="valid-text">
-                <span [ngStyle]="{'color': red}">Your message is empty</span>
+                <span [ngStyle]="{'color': red}">{{'required.message' | translate}}</span>
             </div>
             <div class="invalid-image">
                 <img src="assets/images/vaild-image.png">
@@ -64,13 +64,11 @@
             <input #checkbox="ngModel" type="checkbox" [(ngModel)]="contactData.checkboxPolicy" id name="active" required>
             <span [ngStyle]="{'font-size': '14px'}" style="color: white;">
                 I've read the <span [ngStyle]="styleElement()" (mouseover)="isHovered=true"
-                    (mouseleave)="isHovered=false" (click)="showOverlay()">privacy policy</span> and agree to the
-                processing
-                of my data as outlined.
+                    (mouseleave)="isHovered=false" (click)="showOverlay()">{{'privacyPolicy' | translate}}</span> {{'privacyPolicyAgreement' | translate}}
             </span>
             @if (checkbox.invalid && (checkbox.touched || submitAttempted)) {
                 <div class="valid-text">
-                    <span [ngStyle]="{'color': red}">Please accept the privacy policy.</span>
+                    <span [ngStyle]="{'color': red}">{{'required.privacyPolice' | translate}}</span>
                 </div>
             } 
         </div>
@@ -87,7 +85,7 @@
 
 <div [class.showOverlay]="isVisible" class="privacy-policy">
     <div class="privacy-contianer">
-        <h2>Privacy Police</h2>
+        <h2>{{'privacyPolicyContainer.title' | translate}}</h2>
         <div class="close-btn">
             <p (click)="showOverlay()">x</p>
         </div>
@@ -96,58 +94,45 @@
     <br>
     <br>
     <div class="text">
-        <h2>1. Collection of Information</h2>
+        <h2>1. {{'privacyPolicyContainer.sections.0.title' | translate}}</h2>
         <br>
-        <p>We collect personal data from visitors of our website when they engage with us via the contact form.
-            Providing your name, email address, and the content of your message is required to process your inquiry.</p>
-        <br>
-    </div>
-    <div class="text">
-        <h2>2. Use of Information</h2>
-        <br>
-        <p>The personal data you provide is used exclusively to respond to your inquiries. There is no sharing of this
-            information with third parties, nor is it used for any other purposes.</p>
+        <p>{{'privacyPolicyContainer.sections.0.description' | translate}}</p>
         <br>
     </div>
     <div class="text">
-        <h2>3. Cookies and Tracking</h2>
+        <h2>2. {{'privacyPolicyContainer.sections.1.title' | translate}}</h2>
         <br>
-        <p>Our website does not use cookies or any other tracking technologies to monitor visitor behavior or collect
-            information about their use of the site.</p>
-        <br>
-    </div>
-    <div class="text">
-        <h2>4. Disclosure of Information to Third Parties</h2>
-        <br>
-        <p>We do not disclose your personal data to third parties. Your information remains confidential and is only
-            used
-            for direct communication between you and us.</p>
+        <p>{{'privacyPolicyContainer.sections.1.description' | translate}}</p>
         <br>
     </div>
     <div class="text">
-        <h2>5. Security</h2>
+        <h2>3. {{'privacyPolicyContainer.sections.2.title' | translate}}</h2>
         <br>
-        <p>We take appropriate measures to ensure the security of your personal information and to protect it from
-            unauthorized access, loss, misuse, or alterations. Please note that no data transmission over the internet
-            can
-            be guaranteed to be completely secure, and we cannot ensure the security of data sent to our website.</p>
+        <p>{{'privacyPolicyContainer.sections.2.description' | translate}}</p>
         <br>
     </div>
     <div class="text">
-        <h2>6. User Rights</h2>
+        <h2>4. {{'privacyPolicyContainer.sections.3.title' | translate}}</h2>
         <br>
-        <p>As no registration is required on our website, we only collect information that is provided via the contact
-            form.
-            You have the right to request information about your stored personal data and its correction or deletion, as
-            far
-            as this is legally permissible.</p>
+        <p>{{'privacyPolicyContainer.sections.3.description' | translate}}</p>
         <br>
     </div>
     <div class="text">
-        <h2>7. Contact Information</h2>
+        <h2>5. {{'privacyPolicyContainer.sections.4.title' | translate}}</h2>
         <br>
-        <p>If you have any questions about the use of your data or if you want to exercise your rights regarding your
-            personal data, please contact us at:</p>
+        <p>{{'privacyPolicyContainer.sections.4.description' | translate}}</p>
+        <br>
+    </div>
+    <div class="text">
+        <h2>6. {{'privacyPolicyContainer.sections.5.title' | translate}}</h2>
+        <br>
+        <p>{{'privacyPolicyContainer.sections.5.description' | translate}}</p>
+        <br>
+    </div>
+    <div class="text">
+        <h2>7. {{'privacyPolicyContainer.sections.6.title' | translate}}</h2>
+        <br>
+        <p>{{'privacyPolicyContainer.sections.6.description' | translate}}</p>
         <br>
         <p>Dominik Hucka <br>
             Peteräcker 6 <br>
@@ -156,12 +141,9 @@
         <br>
     </div>
     <div class="text">
-        <h2>8. Changes to the Privacy Policy</h2>
+        <h2>8. {{'privacyPolicyContainer.sections.7.title' | translate}}</h2>
         <br>
-        <p>We reserve the right to amend this privacy policy. We will inform you adequately about any significant
-            changes.
-            Continued use of our website following such changes will be considered as your consent to our updated
-            practices.
+        <p>{{'privacyPolicyContainer.sections.7.description' | translate}}
         </p>
     </div>
 </div>

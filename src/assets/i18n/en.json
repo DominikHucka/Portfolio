@@ -1,0 +1,81 @@
+{
+    "frontend": "Frontend",
+    "developer": "Developer",
+    "sendMessage": "Send a message",
+    "scroll": "Scroll",
+    "down": "Down",
+    "aboutMe": {
+        "title": "About Me",
+        "description": "I'm a Front-end developer from Reutlingen, Germany, with a passion for turning creative concepts and business visions into digital reality. Eager to advance my career in web development, I'm seeking opportunities in junior web developer roles. Should my skills align with your project needs, please feel free to reach out to me!"
+    },
+    "letsTalk": "Let's talk",
+    "mySkills": "My skills",
+    "portfolio": {
+        "intro": "Feel free to try out my latest development projects...",
+        "join": "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.",
+        "elPolloLoco": "Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen."
+    },
+    "sayHi": "Say Hi!",
+    "discussProject": "Want to discuss a new Project?",
+    "descriptionProject": "Say hello! Let's discuss your ideas and make it happen",
+    "yourName": "Your name",
+    "yourEmail": "Your email",
+    "yourMessage": "Your message",
+    "required": {
+        "name": "Your name is required",
+        "email": "Your email is required",
+        "message": "Your message is empty",
+        "privacyPolice": "Please accept the privacy policy."
+    },
+    "privacyPolicyAgreement": "I've read the  and agree to the processing of my data as outlined.",
+    "privacyPolicy": "privacy policy",
+    "sendButton": "Send message",
+    "legalNotice": "Legal notice",
+    "aboutMeShort": "About me",
+    "mySkillsShort": "My Skills",
+    "privacyPolicyContainer": {
+        "title": "Privacy Policy",
+        "sections": [
+            {
+                "number": 1,
+                "title": "Collection of Information",
+                "description": "We collect personal data from visitors of our website when they engage with us via the contact form. Providing your name, email address, and the content of your message is required to process your inquiry."
+            },
+            {
+                "number": 2,
+                "title": "Use of Information",
+                "description": "The personal data you provide is used exclusively to respond to your inquiries. There is no sharing of this information with third parties, nor is it used for any other purposes."
+            },
+            {
+                "number": 3,
+                "title": "Cookies and Tracking",
+                "description": "Our website does not use cookies or any other tracking technologies to monitor visitor behavior or collect information about their use of the site."
+            },
+            {
+                "number": 4,
+                "title": "Disclosure of Information to Third Parties",
+                "description": "We do not disclose your personal data to third parties. Your information remains confidential and is only used for direct communication between you and us."
+            },
+            {
+                "number": 5,
+                "title": "Security",
+                "description": "We take appropriate measures to ensure the security of your personal information and to protect it from unauthorized access, loss, misuse, or alterations. Please note that no data transmission over the internet can be guaranteed to be completely secure, and we cannot ensure the security of data sent to our website."
+            },
+            {
+                "number": 6,
+                "title": "User Rights",
+                "description": "As no registration is required on our website, we only collect information that is provided via the contact form. You have the right to request information about your stored personal data and its correction or deletion, as far as this is legally permissible."
+            },
+            {
+                "number": 7,
+                "title": "Contact Information",
+                "description": "If you have any questions about the use of your data or if you want to exercise your rights regarding your personal data, please contact us at: Dominik Hucka, Peteräcker 6, 72581 Dettingen, Germany."
+            },
+            {
+                "number": 8,
+                "title": "Changes to the Privacy Policy",
+                "description": "We reserve the right to amend this privacy policy. We will inform you adequately about any significant changes. Continued use of our website following such changes will be considered as your consent to our updated practices."
+            }
+        ]
+    }
+}

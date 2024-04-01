@@ -1,0 +1,81 @@
+{
+    "frontend": "Web",
+    "developer": "Entwickler",
+    "sendMessage": "Nachricht senden",
+    "scroll": "Nach unten",
+    "down": "scrollen",
+    "aboutMe": {
+        "title": "Über mich",
+        "description": "Ich bin ein Frontend-Entwickler aus Reutlingen, Deutschland, mit einer Leidenschaft dafür, kreative Konzepte und Geschäftsvisionen in digitale Realität umzusetzen. Ich bin bestrebt, meine Karriere in der Webentwicklung voranzutreiben und suche Möglichkeiten in Rollen als Junior-Webentwickler. Sollten meine Fähigkeiten den Anforderungen Ihres Projekts entsprechen, zögern Sie bitte nicht, mich zu kontaktieren!"
+    },
+    "letsTalk": "Lass uns reden",
+    "mySkills": "Fähigkeiten",
+    "portfolio": {
+        "intro": "Fühlen Sie sich frei, meine neuesten Entwicklungsprojekte auszuprobieren...",
+        "join": "Aufgabenmanager inspiriert vom Kanban-System. Erstellen und organisieren Sie Aufgaben mit Drag-and-Drop-Funktionen, weisen Sie Benutzer und Kategorien zu.",
+        "elPolloLoco": "Springen, laufen und werfen Spiel basierend auf dem objektorientierten Ansatz. Helfen Sie Pepe, Münzen und Tabasco-Salsa zu finden, um gegen das verrückte Huhn zu kämpfen."
+    },
+    "sayHi": "Sag Hallo!",
+    "discussProject": "Möchten Sie ein neues Projekt besprechen?",
+    "descriptionProject": "Sagen Sie Hallo! Lassen Sie uns über Ihre Ideen sprechen und sie verwirklichen",
+    "yourName": "Ihr Name",
+    "yourEmail": "Ihre E-Mail",
+    "yourMessage": "Ihre Nachricht",
+    "required": {
+        "name": "Ihr Name ist erforderlich",
+        "email": "Ihre E-Mail ist erforderlich",
+        "message": "Ihre Nachricht ist leer",
+        "privacyPolice": "Bitte akzeptieren Sie die Datenschutzrichtlinie."
+    },
+    "privacyPolicyAgreement": "Ich habe die  gelesen und stimme der Verarbeitung meiner Daten wie dargelegt zu.",
+    "privacyPolicy": "Datenschutzerklärung",
+    "sendButton": "Nachricht senden",
+    "legalNotice": "Impressum",
+    "aboutMeShort": "Über mich",
+    "mySkillsShort": "Fähigkeiten",
+    "privacyPolicyContainer": {
+        "title": "Datenschutzrichtlinie",
+        "sections": [
+            {
+                "number": 1,
+                "title": "Erfassung von Informationen",
+                "description": "Wir sammeln personenbezogene Daten von Besuchern unserer Website, wenn sie über das Kontaktformular mit uns in Kontakt treten. Die Angabe Ihres Namens, Ihrer E-Mail-Adresse und des Inhalts Ihrer Nachricht ist erforderlich, um Ihre Anfrage zu bearbeiten."
+            },
+            {
+                "number": 2,
+                "title": "Nutzung der Informationen",
+                "description": "Die von Ihnen bereitgestellten personenbezogenen Daten werden ausschließlich zur Beantwortung Ihrer Anfragen verwendet. Diese Informationen werden nicht mit Dritten geteilt oder für andere Zwecke verwendet."
+            },
+            {
+                "number": 3,
+                "title": "Cookies und Tracking",
+                "description": "Unsere Website verwendet keine Cookies oder andere Tracking-Technologien, um das Verhalten der Besucher zu überwachen oder Informationen über deren Nutzung der Website zu sammeln."
+            },
+            {
+                "number": 4,
+                "title": "Weitergabe von Informationen an Dritte",
+                "description": "Wir geben Ihre personenbezogenen Daten nicht an Dritte weiter. Ihre Informationen bleiben vertraulich und werden nur für die direkte Kommunikation zwischen Ihnen und uns verwendet."
+            },
+            {
+                "number": 5,
+                "title": "Sicherheit",
+                "description": "Wir ergreifen geeignete Maßnahmen, um die Sicherheit Ihrer persönlichen Informationen zu gewährleisten und sie vor unbefugtem Zugriff, Verlust, Missbrauch oder Veränderungen zu schützen. Bitte beachten Sie, dass keine Datenübertragung über das Internet vollständig sicher garantiert werden kann und wir die Sicherheit von Daten, die an unsere Website gesendet werden, nicht gewährleisten können."
+            },
+            {
+                "number": 6,
+                "title": "Nutzerrechte",
+                "description": "Da keine Registrierung auf unserer Website erforderlich ist, sammeln wir nur Informationen, die über das Kontaktformular bereitgestellt werden. Sie haben das Recht, Informationen über Ihre gespeicherten personenbezogenen Daten sowie deren Korrektur oder Löschung zu beantragen, soweit dies rechtlich zulässig ist."
+            },
+            {
+                "number": 7,
+                "title": "Kontaktinformationen",
+                "description": "Wenn Sie Fragen zur Nutzung Ihrer Daten haben oder Ihre Rechte bezüglich Ihrer personenbezogenen Daten ausüben möchten, kontaktieren Sie uns bitte unter: Dominik Hucka, Peteräcker 6, 72581 Dettingen, Deutschland."
+            },
+            {
+                "number": 8,
+                "title": "Änderungen der Datenschutzrichtlinie",
+                "description": "Wir behalten uns das Recht vor, diese Datenschutzrichtlinie zu ändern. Wir werden Sie angemessen über alle wesentlichen Änderungen informieren. Die fortgesetzte Nutzung unserer Website nach solchen Änderungen gilt als Ihre Zustimmung zu unseren aktualisierten Praktiken."
+            }
+        ]
+    }
+}
