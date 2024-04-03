@@ -8,7 +8,8 @@
     <form class="form-validation-container" (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
 
         <div class="form-group">
-            <input #name="ngModel" [(ngModel)]="contactData.name" type="text" id="name" name="name" class="input-field" required>
+            <input #name="ngModel" [(ngModel)]="contactData.name" type="text" id="name" name="name" class="input-field"
+                required>
             <label [class.active]="name.value" for="name">{{'yourName' | translate}}</label>
             @if (!name.valid && (name.touched || submitAttempted)) {
             <div class="valid-text">
@@ -26,7 +27,7 @@
 
         <div class="form-group">
             <input #email="ngModel" [(ngModel)]="contactData.email" type="email" id="email" name="email"
-                class="input-field" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" required>
+                class="input-field" pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$" required>
             <label [class.active]="email.value" for="email">{{'yourEmail' | translate}}</label>
             @if (!email.valid && (email.touched || submitAttempted)) {
             <div class="valid-text">
@@ -61,20 +62,26 @@
         </div>
 
         <div class="checkbox">
-            <input #checkbox="ngModel" type="checkbox" [(ngModel)]="contactData.checkboxPolicy" id name="active" required>
-            <span [ngStyle]="{'font-size': '14px'}" style="color: white;">
-                I've read the <span [ngStyle]="styleElement()" (mouseover)="isHovered=true"
-                    (mouseleave)="isHovered=false" (click)="showOverlay()">{{'privacyPolicy' | translate}}</span> {{'privacyPolicyAgreement' | translate}}
-            </span>
+            <div class="checkbox-container">
+                <input #checkbox="ngModel" type="checkbox" [(ngModel)]="contactData.checkboxPolicy" id name="active"
+                    required>
+                <span [ngStyle]="{'font-size': '14px'}" style="color: white;">
+                    {{'read' | translate}} <span [ngStyle]="styleElement()" (mouseover)="isHovered=true"
+                        (mouseleave)="isHovered=false" (click)="showOverlay()">{{'privacyPolicy' | translate}}</span>
+                    {{'privacyPolicyAgreement' | translate}}
+                </span>
+            </div>
             @if (checkbox.invalid && (checkbox.touched || submitAttempted)) {
-                <div class="valid-text">
-                    <span [ngStyle]="{'color': red}">{{'required.privacyPolice' | translate}}</span>
-                </div>
-            } 
+            <div class="valid-text">
+                <span [ngStyle]="{'color': red}">{{'required.privacyPolice' | translate}}</span>
+            </div>
+            }
         </div>
 
         <div class="button-container">
-            <button [ngClass]="{'button-valid': checkbox.valid && message.valid && email.valid && name.valid}" class="button" type="submit">
+            <button [ngClass]="{'button-valid': checkbox.valid && message.valid && email.valid && name.valid }"
+                class="button" type="submit"
+                [disabled]=" !checkbox.valid && !message.valid && !email.valid && !name.valid">
                 Send message
             </button>
         </div>

@@ -18,7 +18,10 @@
 .close-btn {
     @include dFlexSpace();
     justify-content: center;
-    @include btn();
+    @include btn(45px, 45px);
+    >p {
+        font-size: 36px;
+    }
 }
 
 
@@ -28,6 +31,13 @@
             h2 {
                 font-size: 22px;
             }
+        }
+    }
+
+    .close-btn {
+        @include btn(25px, 25px);
+        >p {
+            font-size: 23px;
         }
     }
 }

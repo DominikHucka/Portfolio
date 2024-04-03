@@ -27,7 +27,8 @@
         "message": "Ihre Nachricht ist leer",
         "privacyPolice": "Bitte akzeptieren Sie die Datenschutzrichtlinie."
     },
-    "privacyPolicyAgreement": "Ich habe die  gelesen und stimme der Verarbeitung meiner Daten wie dargelegt zu.",
+    "privacyPolicyAgreement": "gelesen und stimme der Verarbeitung meiner Daten wie dargelegt zu.",
+    "read": "Ich habe die",
     "privacyPolicy": "Datenschutzerklärung",
     "sendButton": "Nachricht senden",
     "legalNotice": "Impressum",

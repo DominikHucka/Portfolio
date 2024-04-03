@@ -28,6 +28,7 @@ export class ContactFormComponent {
   http = inject(HttpClient);
   animateSuccsess: any;
   succsess: any;
+  privacyPolicyContainer: any;
 
 
   styleElement() {
@@ -52,11 +53,8 @@ export class ContactFormComponent {
   }
 
 
-  mailTest = true;
-
-
   post = {
-    endPoint: 'https://dominikhucka.de/sendMail.php',
+    endPoint: 'https://portfolio.dominikhucka.de/sendMail.php',
     body: (payload: any) => JSON.stringify(payload),
     options: {
       headers: {
@@ -69,7 +67,7 @@ export class ContactFormComponent {
 
   onSubmit(ngForm: NgForm) {
     this.submitAttempted = true;
-    if (ngForm.submitted && ngForm.form.valid && !this.mailTest) {
+    if (ngForm.submitted && ngForm.form.valid) {
       this.function.showOverlay();
       this.http.post(this.post.endPoint, this.post.body(this.contactData))
         .subscribe({
@@ -82,10 +80,6 @@ export class ContactFormComponent {
           },
           complete: () => console.info('send post complete'),
         });
-    } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
-      ngForm.resetForm();
-      this.submitAttempted = false;
-      this.function.showOverlay();
     }
   }
 }

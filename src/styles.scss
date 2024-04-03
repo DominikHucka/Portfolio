@@ -48,7 +48,6 @@ input:-webkit-autofill {
 }
 
 
-
 html,
 body {
     height: 100%;
@@ -60,6 +59,9 @@ body {
 }
 
 
+body {
+    overflow-x: hidden;
+}
 
 
 h1,

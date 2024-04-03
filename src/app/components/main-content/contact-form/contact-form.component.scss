@@ -103,6 +103,7 @@ textarea:focus+label,
     text-align: center;
 }
 
+
 label {
     position: absolute;
     left: 20px;
@@ -113,7 +114,16 @@ label {
 }
 
 
+.checkbox-container {
+    display: flex;
+    align-items: start;
+    gap: 5px;
+}
+
+
 .checkbox {
+   @include flexDirectionColumn();
+    gap: 5px;
     >input {
         &:hover {
             cursor: pointer;
@@ -151,7 +161,7 @@ label {
 
 .close-btn {
     @include dFlexCenter();
-    @include btn();
+    @include btn(25px, 25px);
 }
 
 
@@ -224,12 +234,6 @@ label {
         >span {
             font-size: 14px;
         }
-    }
-
-    .checkbox {
-        display: flex;
-        align-items: start;
-        gap: 5px;
     }
 }
 

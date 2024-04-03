@@ -27,7 +27,8 @@
         "message": "Your message is empty",
         "privacyPolice": "Please accept the privacy policy."
     },
-    "privacyPolicyAgreement": "I've read the  and agree to the processing of my data as outlined.",
+    "privacyPolicyAgreement": "and agree to the processing of my data as outlined.",
+    "read": "I've read the",
     "privacyPolicy": "privacy policy",
     "sendButton": "Send message",
     "legalNotice": "Legal notice",
