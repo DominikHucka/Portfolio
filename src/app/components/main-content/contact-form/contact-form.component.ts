@@ -72,7 +72,7 @@ export class ContactFormComponent {
       this.http.post(this.post.endPoint, this.post.body(this.contactData))
         .subscribe({
           next: (response) => {
-            console.log('Erfolgreiche Antwort vom Server:', response);
+            console.log('Succsessful response from the server:', response);
             ngForm.resetForm();
           },
           error: (error) => {

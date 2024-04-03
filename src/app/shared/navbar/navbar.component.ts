@@ -26,6 +26,7 @@ export class NavbarComponent {
   toggleActiveAndNavigate() {
     if (!this.isActive) {
       this.router.navigate(['/menu']);
+      window.scrollTo(0, 0);
     } else if (this.isActive) {
       this.router.navigate(['/']);
     } 
