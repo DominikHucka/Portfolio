@@ -27,7 +27,7 @@
 
         <div class="form-group">
             <input #email="ngModel" [(ngModel)]="contactData.email" type="email" id="email" name="email"
-                class="input-field" pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$" required>
+                class="input-field" pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" required>
             <label [class.active]="email.value" for="email">{{'yourEmail' | translate}}</label>
             @if (!email.valid && (email.touched || submitAttempted)) {
             <div class="valid-text">
