@@ -1,13 +1,14 @@
 import { CommonModule } from '@angular/common';
 import { Component, inject } from '@angular/core';
-import { Router, RouterLink, RouterLinkActive } from '@angular/router';
+// import { Router, RouterLink, RouterLinkActive } from '@angular/router';
 import { TranslationService } from '../../services/translation.service';
 import { FunctionDataService } from '../../services/function-data.service';
+import { MenuComponent } from '../../components/overlay/menu/menu.component';
 
 @Component({
   selector: 'app-navbar',
   standalone: true,
-  imports: [CommonModule, RouterLink, RouterLinkActive],
+  imports: [CommonModule, MenuComponent],
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.scss'
 })
@@ -20,23 +21,28 @@ export class NavbarComponent {
   function = inject(FunctionDataService);
 
 
-  constructor(private router: Router) {}
+  constructor() {}
 
 
-  toggleActiveAndNavigate() {
-    if (!this.isActive) {
-      this.router.navigate(['/menu']);
-      window.scrollTo(0, 0);
-    } else if (this.isActive) {
-      this.router.navigate(['/']);
-    } 
-    this.toggleActive();
+  toggleMenu() {
+    this.function.showMenu();
   }
 
 
-  toggleActive() {
-    this.isActive = !this.isActive;
-  }
+  // toggleActiveAndNavigate() {
+  //   if (!this.isActive) {
+  //     this.router.navigate(['/menu']);
+  //     window.scrollTo(0, 0);
+  //   } else if (this.isActive) {
+  //     this.router.navigate(['/']);
+  //   } 
+  //   this.toggleActive();
+  // }
+
+
+  // toggleActive() {
+  //   this.isActive = !this.isActive;
+  // }
 
 
   switchLanguage(language: string) {

@@ -82,7 +82,7 @@
             <button [ngClass]="{'button-valid': checkbox.valid && message.valid && email.valid && name.valid }"
                 class="button" type="submit"
                 [disabled]=" !checkbox.valid && !message.valid && !email.valid && !name.valid">
-                Send message
+                {{ 'sendMessage' | translate }}
             </button>
         </div>
     </form>

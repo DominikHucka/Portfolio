@@ -1,11 +1,14 @@
-<div class="menu">
-    <a data-aos="zoom-in"  href="#aboutMe" class="menu-container">
-        <h1>{{'aboutMeShort' | translate}}</h1>
-    </a>
-    <a data-aos="zoom-in" href="#mySkills" class="menu-container">
-        <h1>{{'mySkillsShort' | translate}}</h1>
-    </a>
-    <a data-aos="zoom-in" href="#portfolio" class="menu-container">
-        <h1>Portfolio</h1>
-    </a>
+<div class="menu-overlay" [class.show-menu]="function.menu">
+    <div class="menu">
+        <a  (click)="function.closeMenu()" href="#aboutMe"
+            class="menu-container">
+            <h1>{{'aboutMeShort' | translate}}</h1>
+        </a>
+        <a  (click)="function.closeMenu()" href="#mySkills" class="menu-container">
+            <h1>{{'mySkillsShort' | translate}}</h1>
+        </a>
+        <a (click)="function.closeMenu()" href="#portfolio" class="menu-container">
+            <h1>Portfolio</h1>
+        </a>
+    </div>
 </div>

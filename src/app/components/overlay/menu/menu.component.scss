@@ -78,11 +78,30 @@ h1:hover::after {
 }
 
 
+.menu-overlay {
+    height: 100vh;
+    background-color: $main_color;
+    z-index: 998;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transition: all .5s ease-in-out;
+    transform: translateY(1000%);
+}
+
+
 .menu {
     @include dFlexCenter();
     flex-direction: column;
     gap: 35px;
     height: 100vh;
+}
+
+
+.show-menu {
+    transform: translateY(0);
 }
 
 
@@ -168,8 +187,6 @@ h1:hover::after {
 @media (max-width: 576px) {
     .menu {
         margin: 0;
-        height: 75vh;
-
         >a {
             >h1 {
                 font-size: 36px;

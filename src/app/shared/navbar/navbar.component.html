@@ -19,7 +19,7 @@
                 <p [ngStyle]="{'color': function.isLanguageActive('de') ? 'black' : 'grey'}" (click)="switchLanguage('de')">DE</p>
             </div>
             <div class="navbar">
-                <div (click)="toggleActiveAndNavigate()" [class.active]="isActive" [class.not-active]="!isActive"
+                <div [ngClass]="{'show-menu': function.menu}" (click)="toggleMenu()" [class.active]="function.menu" [class.not-active]="!function.menu"
                     class="btn not-active">
                     <span></span>
                     <span></span>
@@ -29,3 +29,4 @@
         </div>
     </div>
 </section>
+<app-menu></app-menu>

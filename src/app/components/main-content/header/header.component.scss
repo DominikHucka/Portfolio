@@ -98,15 +98,17 @@
 
     25% {
         transform: translateY(25%);
+        opacity: .5;
     }
 
-    50% {
+    70% {
         transform: translateY(50%);
+        opacity: 0;
     }
 
     100% {
         transform: translateY(100%);
-
+        opacity: 0;
     }
 }
 
@@ -190,9 +192,11 @@
 
 @media (max-width: 576px) {
     .scroll-down {
+        gap: 45px;
+        height: 0;
         >img {
             width: auto;
-            height: 100px;
+            height: 200px;
         }
     }
 
@@ -228,6 +232,7 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        padding-bottom: 100px;
         >a {
             z-index: 900;
         }

@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
-import AOS from 'aos';
+import { FunctionDataService } from '../../../services/function-data.service';
 
 @Component({
   selector: 'app-menu',
@@ -10,12 +10,8 @@ import AOS from 'aos';
   templateUrl: './menu.component.html',
   styleUrl: './menu.component.scss',
 })
-export class MenuComponent implements OnInit {
+export class MenuComponent {
 
-
-  ngOnInit(): void {
-    if (typeof window !== 'undefined') {
-      AOS.init();
-    }
-  }
+  function = inject(FunctionDataService);
+  
 }
