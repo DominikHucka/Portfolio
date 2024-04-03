@@ -74,6 +74,7 @@ export class ContactFormComponent {
           next: (response) => {
             console.log('Succsessful response from the server:', response);
             ngForm.resetForm();
+            this.submitAttempted = false;
           },
           error: (error) => {
             console.error(error);

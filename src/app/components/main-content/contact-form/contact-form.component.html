@@ -63,7 +63,7 @@
 
         <div class="checkbox">
             <div class="checkbox-container">
-                <input #checkbox="ngModel" type="checkbox" [(ngModel)]="contactData.checkboxPolicy" id name="active"
+                <input #checkbox="ngModel" type="checkbox" [(ngModel)]="contactData.checkboxPolicy" name="active"
                     required>
                 <span [ngStyle]="{'font-size': '14px'}" style="color: white;">
                     {{'read' | translate}} <span [ngStyle]="styleElement()" (mouseover)="isHovered=true"

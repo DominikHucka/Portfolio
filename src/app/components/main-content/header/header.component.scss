@@ -189,6 +189,14 @@
 
 
 @media (max-width: 576px) {
+    .scroll-down {
+        >img {
+            width: auto;
+            height: 100px;
+        }
+    }
+
+
     .header {
         >h1 {
             font-size: 40px;

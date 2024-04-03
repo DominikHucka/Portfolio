@@ -12,8 +12,10 @@
     "mySkills": "My skills",
     "portfolio": {
         "intro": "Feel free to try out my latest development projects...",
-        "join": "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.",
-        "elPolloLoco": "Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen."
+        "join": "Task manager inspired by the Kanban System. Create and organize tasks using",
+        "join2": "drag and drop functions, assign users and categories.",
+        "elPolloLoco": "Jump, run and throw game based on object-oriented approach",
+        "elPolloLoco2": "Help Pepe to find coins and tabasco salsa to fight against the crazy hen."
     },
     "sayHi": "Say Hi!",
     "discussProject": "Want to discuss a new Project?",

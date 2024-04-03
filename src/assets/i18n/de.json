@@ -12,8 +12,10 @@
     "mySkills": "Fähigkeiten",
     "portfolio": {
         "intro": "Fühlen Sie sich frei, meine neuesten Entwicklungsprojekte auszuprobieren...",
-        "join": "Aufgabenmanager inspiriert vom Kanban-System. Erstellen und organisieren Sie Aufgaben mit Drag-and-Drop-Funktionen, weisen Sie Benutzer und Kategorien zu.",
-        "elPolloLoco": "Springen, laufen und werfen Spiel basierend auf dem objektorientierten Ansatz. Helfen Sie Pepe, Münzen und Tabasco-Salsa zu finden, um gegen das verrückte Huhn zu kämpfen."
+        "join": "Aufgabenmanager inspiriert vom Kanban-System. Erstellen und organisieren Sie Aufgaben mit",
+        "join2": "Drag-and-Drop-Funktionen, weisen Sie Benutzer und Kategorien zu.",
+        "elPolloLoco": "Springen, laufen und werfen Spiel basierend auf dem objektorientierten Ansatz.",
+        "elPolloLoco2": "Helfen Sie Pepe, Münzen und Tabasco-Salsa zu finden, um gegen das verrückte Huhn zu kämpfen."
     },
     "sayHi": "Sag Hallo!",
     "discussProject": "Möchten Sie ein neues Projekt besprechen?",
