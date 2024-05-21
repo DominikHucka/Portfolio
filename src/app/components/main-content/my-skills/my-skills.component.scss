@@ -24,19 +24,19 @@
 
 .my-skills-text {
     @include dFlexCenter();
-    position: absolute;
-    left: 0;
-    right: 0;
-    margin-left: auto;
-    margin-right: auto;
-    top: -50px;
+    position: relative;
     z-index: 2;
 
-    >h2 {
-        background-color: $main_color;
-        text-align: center;
-        font-size: 78px;
-        font-weight: 800;
+    >div {
+        position: absolute;
+        width: auto;
+
+        >h2 {
+            background-color: $main_color;
+            text-align: center;
+            font-size: 78px;
+            font-weight: 800;
+        }
     }
 }
 
@@ -98,10 +98,10 @@
     }
 
     .my-skills-text {
-        top: -30px;
-
-        >h2 {
-            font-size: 50px;
+        >div {
+            >h2 {
+                font-size: 50px;
+            }
         }
     }
 }
@@ -150,9 +150,10 @@
     }
 
     .my-skills-text {
-        top: -25px;
-        >h2 {
-            font-size: 36px;
+        >div {
+            >h2 {
+                font-size: 36px;
+            }
         }
     }
 }
@@ -190,9 +191,10 @@
     }
 
     .my-skills-text {
-        top: -20px;
-        >h2 {
-            font-size: 26px;
+        >div {
+            >h2 {
+                font-size: 26px;
+            }
         }
     }
 }
@@ -201,8 +203,10 @@
 
 @media (max-width: 414px) {
     .my-skills-text {
-        >h2 {
-            font-size: 26px;
+        >div {
+            >h2 {
+                font-size: 26px;
+            }
         }
     }
 
